@@ -7,6 +7,8 @@ import {Link} from 'react-router-dom';
 import TopBar from './TopBar';
 import Login from './Login';
 
+import styles from '../styles';
+
 class Dashboard extends React.Component {
 
   constructor(props) {
@@ -42,7 +44,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <TopBar />
-        <Link to="/admin/collections"><button className="btn btn-lg btn-dark">Collections</button></Link>
+        <Link to="/admin/collections"><button style={styles.hugeButton}>Collections</button></Link>
       </div>
     );
   }

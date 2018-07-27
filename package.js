@@ -17,6 +17,7 @@ Package.onUse(function(api) {
   api.export('Whatup');
   api.mainModule('client.js','client');
   api.mainModule('server.js','server');
+  api.addFiles('styles.css', 'client');
 });
 
 // external dependencies: Meteor, react-meteor-data, react, react-dom, dburles:mongo-collection-instances,accounts-base, accounts-password
@@ -24,7 +25,7 @@ Package.onUse(function(api) {
 
 Npm.depends({
   "react-json-editor-ajrm": "2.4.4",
-  "react-router-dom": "4.3.1"
+  "react-router-dom": "4.3.1",
 });
 
 Package.onTest(function(api) {

@@ -6,6 +6,8 @@ import React from 'react';
 import TopBar from './TopBar';
 import Doc from './Doc';
 
+import styles from '../styles';
+
 class Collection extends React.Component {
   renderDocs() {
     return this.props.docs.map(doc => (

@@ -4,6 +4,8 @@ import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
+import styles from '../styles';
+
 export default class TopBar extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +43,7 @@ export default class TopBar extends React.Component {
   render() {
 
     return (
-      <div>
+      <div style={{'fontFamily': 'sans-serif', padding: 20}}>
         <div style={{display: 'flex', 'flexDirection': 'horizontal'}}>
           <div style={{flex: 1}}>
             {this.renderNav()}
@@ -50,7 +52,7 @@ export default class TopBar extends React.Component {
               {this.renderLogoutButton()  }
           </div>
         </div>
-        <hr />
+        <hr style={{borderTop: '1px solid #ccc'}} />
         {this.state.goToLogin ? <Redirect to="/admin" /> : null}
       </div>
     );

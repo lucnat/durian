@@ -1,5 +1,7 @@
 
 import { Meteor } from 'meteor/meteor';
+import { Tracker } from 'meteor/tracker';
+import { Mongo } from 'meteor/mongo';
 import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
 import { BrowserRouter, Route, Link, Redirect, withRouter, Switch} from "react-router-dom";
@@ -7,6 +9,17 @@ import { BrowserRouter, Route, Link, Redirect, withRouter, Switch} from "react-r
 import Dashboard from './components/Dashboard';
 import Collections from './components/Collections';
 import Collection from './components/Collection';
+
+// subscriptions
+
+Meteor.startup(() => {
+  Tracker.autorun(() => {
+    const collections = Mongo.Collection.getAll();
+    collections.forEach(collection => {
+      Meteor.subscribe('admin_'+collection.name);
+    });
+  });
+});
 
 export let AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
   <Route {...rest} render={props => (
