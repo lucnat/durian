@@ -1,7 +1,6 @@
 
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
-import Blaze from 'meteor/gadicc:blaze-react-component';
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 

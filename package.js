@@ -1,6 +1,7 @@
+
 Package.describe({
-  name: 'lucnat:durian',
-  version: '0.0.1',
+  name: 'cul:durian',
+  version: '0.0.2',
   // Brief, one-line summary of the package.
   summary: 'Admin Dashboard for meteor react',
   // URL to the Git repository containing the source code for this package.
@@ -18,6 +19,9 @@ Package.onUse(function(api) {
   api.mainModule('server.js','server');
 });
 
+// external dependencies: Meteor, react-meteor-data, react, react-dom, dburles:mongo-collection-instances,accounts-base, accounts-password
+
+
 Npm.depends({
   "react-json-editor-ajrm": "2.4.4",
   "react-router-dom": "4.3.1"
@@ -26,8 +30,4 @@ Npm.depends({
 Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
-  api.use('durian');
-  api.export('Whatup');
-  api.mainModule('client.js','client');
-  api.mainModule('client.js','server');
 });

@@ -1,6 +1,4 @@
 
-// dependencies: Meteor, react-meteor-data, React, react-router-dom, react-json-editor-ajrm
-
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
