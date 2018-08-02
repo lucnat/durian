@@ -7,8 +7,6 @@ import {Link} from 'react-router-dom';
 
 import TopBar from './TopBar';
 
-import styles from '../styles';
-
 export default class Collections extends React.Component {
   constructor(props){
     super(props);

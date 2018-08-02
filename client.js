@@ -9,9 +9,9 @@ import { BrowserRouter, Route, Link, Redirect, withRouter, Switch} from "react-r
 import Dashboard from './components/Dashboard';
 import Collections from './components/Collections';
 import Collection from './components/Collection';
+import Stats from './components/Stats';
 
 // subscriptions
-
 Meteor.startup(() => {
   Tracker.autorun(() => {
     const collections = Mongo.Collection.getAll();
@@ -43,5 +43,6 @@ class EmptyLayout extends React.Component {
 export const adminRoutes = [
   <AppRoute key="1" exact path="/admin" layout={EmptyLayout} component={Dashboard} />,
   <AppRoute key="2" exact path="/admin/collections" layout={EmptyLayout} component={Collections} />,
-  <AppRoute key="3" exact path="/admin/collections/:collection" layout={EmptyLayout} component={Collection} />
+  <AppRoute key="3" exact path="/admin/stats" layout={EmptyLayout} component={Stats} />,
+  <AppRoute key="4" exact path="/admin/collections/:collection" layout={EmptyLayout} component={Collection} />
 ];

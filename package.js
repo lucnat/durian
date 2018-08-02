@@ -1,7 +1,7 @@
 
 Package.describe({
   name: 'cul:durian',
-  version: '0.0.2',
+  version: '0.1.0',
   // Brief, one-line summary of the package.
   summary: 'Admin Dashboard for meteor react',
   // URL to the Git repository containing the source code for this package.
@@ -20,7 +20,7 @@ Package.onUse(function(api) {
   api.addFiles('styles.css', 'client');
 });
 
-// external dependencies: Meteor, react-meteor-data, react, react-dom, dburles:mongo-collection-instances,accounts-base, accounts-password
+// external dependencies: react-meteor-data, react, react-dom, dburles:mongo-collection-instances, accounts-base, accounts-password
 
 
 Npm.depends({

@@ -7,8 +7,6 @@ import {Link} from 'react-router-dom';
 import TopBar from './TopBar';
 import Login from './Login';
 
-import styles from '../styles';
-
 class Dashboard extends React.Component {
 
   constructor(props) {
@@ -23,6 +21,16 @@ class Dashboard extends React.Component {
       let user = Meteor.user();
       Meteor.call('isAdmin',user, (e,r) => {this.setState({isAdmin: r})} );
     })
+  }
+
+  renderStatsButton() {
+    if(Package['cul:stats']) {
+      return (
+        <Link to="/admin/stats">
+          <button className="btn btn-lg btn-primary">Stats</button>
+        </Link>
+      );
+    }
   }
 
   render() {
@@ -43,7 +51,10 @@ class Dashboard extends React.Component {
     return (
       <div>
         <TopBar />
-        <Link to="/admin/collections"><button class="btn btn-lg btn-primary">Collections</button></Link>
+        <Link to="/admin/collections">
+          <button className="btn btn-lg btn-primary">Collections</button>
+        </Link>
+        {this.renderStatsButton()}
       </div>
     );
   }

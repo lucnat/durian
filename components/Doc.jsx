@@ -3,8 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import JSONInput from 'react-json-editor-ajrm';
 
-import styles from '../styles';
-
 export default class Doc extends React.Component {
   // props: doc, Collection
 

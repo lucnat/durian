@@ -4,8 +4,6 @@ import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
-import styles from '../styles';
-
 export default class TopBar extends React.Component {
   constructor(props) {
     super(props);
@@ -14,10 +12,11 @@ export default class TopBar extends React.Component {
     };
   }
   renderNav() {
-    var items = document.location.pathname.split('/');
-    var dashboard = <Link to='/admin'>Dashboard</Link>;
-    var collections = <Link to={'/admin/collections'}>collections</Link>;
-    var collection = <Link to={'/admin/collections/'+items[3]}>{items[3]}</Link>;
+    const items = document.location.pathname.split('/');
+    const dashboard = <Link to='/admin'>Dashboard</Link>;
+    const collections = <Link to={'/admin/collections'}>collections</Link>;
+    const collection = <Link to={'/admin/collections/'+items[3]}>{items[3]}</Link>;
+    const stats = <Link to={'/admin/stats'}>stats</Link>;
 
     if(items.includes('collections') && items.length == 4) return (
       <h3>{dashboard} / {collections} / {collection}</h3>
@@ -25,7 +24,11 @@ export default class TopBar extends React.Component {
 
     if(items.includes('collections')) return (
       <h3>{dashboard} / {collections}</h3>
-    )
+    );
+
+    if(items.includes('stats')) return (
+      <h3>{dashboard} / {stats}</h3>
+    );
 
     return (
       <h3>{dashboard}</h3>
