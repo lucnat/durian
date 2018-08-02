@@ -26,7 +26,6 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     if(!this.props.user) return (
       <div>
         <TopBar />
@@ -44,7 +43,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <TopBar />
-        <Link to="/admin/collections"><button style={styles.hugeButton}>Collections</button></Link>
+        <Link to="/admin/collections"><button class="btn btn-lg btn-primary">Collections</button></Link>
       </div>
     );
   }

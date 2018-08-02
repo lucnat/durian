@@ -48,8 +48,8 @@ export default class CollectionWrapper extends React.Component {
       <div className="form-inline">
         <label htmlFor="">json mongo filter</label>
         <input className="form-control" id='filter' type="text" defaultValue='{}' style={{marginLeft: 10, fontFamily: 'monospace', fontSize: 20}}/>
-        <button className="btn btn-default" style={{marginLeft: 10}} onClick={this.onApplyFilter.bind(this)}>apply filter</button>
-        <button className="btn btn-default" style={{marginLeft: 10}} onClick={this.resetFilter.bind(this)}>reset filter</button>
+        <button className="btn btn-light" style={{marginLeft: 10}} onClick={this.onApplyFilter.bind(this)}>apply filter</button>
+        <button className="btn btn-light" style={{marginLeft: 10}} onClick={this.resetFilter.bind(this)}>reset filter</button>
       </div>
     );
   }

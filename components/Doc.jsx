@@ -36,9 +36,9 @@ export default class Doc extends React.Component {
   
   renderSaveButton() {
     if(!this.state.hasError && this.state.doc) {
-      return <button className="btn btn-default" onClick={this.onSave.bind(this)}>Save</button>
+      return <button className="btn btn-light" onClick={this.onSave.bind(this)}>Save</button>
     } else {
-      return <button className="btn btn-default disabled" onClick={this.onSave.bind(this)}>Save</button>
+      return <button className="btn btn-light disabled" onClick={this.onSave.bind(this)}>Save</button>
     }
   }
 
@@ -66,8 +66,8 @@ export default class Doc extends React.Component {
           />
           <div style={{flex: 1, marginLeft: 20}}>
             {this.renderSaveButton()} <br/>
-            <button className="btn btn-default" onClick={this.onDuplicate.bind(this)}>Duplicate</button> <br/>
-            <button className="btn btn-default" onClick={() => {this.props.Collection.remove(doc._id)}}>Delete</button>
+            <button className="btn btn-light" onClick={this.onDuplicate.bind(this)}>Duplicate</button> <br/>
+            <button className="btn btn-light" onClick={() => {this.props.Collection.remove(doc._id)}}>Delete</button>
           </div>
         </div>
         <hr/>

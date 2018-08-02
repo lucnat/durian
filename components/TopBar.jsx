@@ -28,14 +28,14 @@ export default class TopBar extends React.Component {
     )
 
     return (
-      <h3>Dashboard</h3>
+      <h3>{dashboard}</h3>
     );
   }
 
   renderLogoutButton() {
     if(Meteor.userId()) {
       return (
-        <button onClick={() => {Meteor.logout(); this.setState({goToLogin: true})}} className="btn btn-dark">Logout</button>
+        <button onClick={() => {Meteor.logout(); this.setState({goToLogin: true})}} className="btn btn-primary">Logout</button>
       );
     }
   }
@@ -43,7 +43,7 @@ export default class TopBar extends React.Component {
   render() {
 
     return (
-      <div style={{'fontFamily': 'sans-serif', padding: 20}}>
+      <div>
         <div style={{display: 'flex', 'flexDirection': 'horizontal'}}>
           <div style={{flex: 1}}>
             {this.renderNav()}
@@ -52,7 +52,7 @@ export default class TopBar extends React.Component {
               {this.renderLogoutButton()  }
           </div>
         </div>
-        <hr style={{borderTop: '1px solid #ccc'}} />
+        <hr/>
         {this.state.goToLogin ? <Redirect to="/admin" /> : null}
       </div>
     );
