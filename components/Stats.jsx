@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
 
-import Plot from 'react-plotly.js';
+// import Plot from 'react-plotly.js';
 import moment from 'moment';
 
 import TopBar from './TopBar';
@@ -28,7 +28,7 @@ class Stats extends React.Component {
       const y = this.props.stats[key];
       return (
         <div key={key}>
-          <Plot
+{/*          <Plot
             data={[
               {
                 x: timeColumn,
@@ -51,7 +51,7 @@ class Stats extends React.Component {
             }}
 
           />
-        </div>
+*/}        </div>
       )
     });
   }

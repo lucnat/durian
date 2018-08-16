@@ -26,7 +26,7 @@ class Dashboard extends React.Component {
   renderStatsButton() {
     if(Package['cul:stats']) {
       return (
-        <Link to="/admin/stats">
+        <Link to="/admin/stats" style={{marginLeft: 20}}>
           <button className="btn btn-lg btn-primary">Stats</button>
         </Link>
       );
