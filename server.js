@@ -25,7 +25,7 @@ Meteor.startup(() => {
   collections.forEach(collection => {
     Meteor.publish('admin_'+collection.name, function() {
       const user = Meteor.users.findOne(this.userId);
-      if(user && user.emails[0].address == adminEmail){
+      if(user && user.profile && user.profile.isAdmin){
         return collection.instance.find({});
       }
     })
