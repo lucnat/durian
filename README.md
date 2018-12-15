@@ -18,5 +18,5 @@ and for the stats addon
 
 # Dependencies
  - Bootstrap
- - React
+ - React and React-Router
  - `dburles:mongo-collection-instances`
