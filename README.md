@@ -16,3 +16,7 @@ and for the stats addon
 
 ```meteor add cul:stats``` 
 
+# Dependencies
+ - Bootstrap
+ - React
+ - `dburles:mongo-collection-instances`
