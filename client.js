@@ -41,8 +41,8 @@ class EmptyLayout extends React.Component {
 
 // admin routes
 export const adminRoutes = [
-  <AppRoute key="1" exact path="/admin" layout={EmptyLayout} component={Dashboard} />,
-  <AppRoute key="2" exact path="/admin/collections" layout={EmptyLayout} component={Collections} />,
-  <AppRoute key="3" exact path="/admin/stats" layout={EmptyLayout} component={Stats} />,
-  <AppRoute key="4" exact path="/admin/collections/:collection" layout={EmptyLayout} component={Collection} />
+  <AppRoute key="1" exact path="/durian" layout={EmptyLayout} component={Dashboard} />,
+  <AppRoute key="2" exact path="/durian/collections" layout={EmptyLayout} component={Collections} />,
+  <AppRoute key="3" exact path="/durian/stats" layout={EmptyLayout} component={Stats} />,
+  <AppRoute key="4" exact path="/durian/collections/:collection" layout={EmptyLayout} component={Collection} />
 ];

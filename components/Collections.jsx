@@ -27,7 +27,7 @@ export default class Collections extends React.Component {
   }
   renderCollections() {
     return this.state.collections.map(collection => (
-      <li key={collection.name}><Link to={'/admin/collections/'+collection.name}>{collection.name}</Link></li>
+      <li key={collection.name}><Link to={'/durian/collections/'+collection.name}>{collection.name}</Link></li>
     ));
   }
   render() {

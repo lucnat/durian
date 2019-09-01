@@ -13,10 +13,10 @@ export default class TopBar extends React.Component {
   }
   renderNav() {
     const items = document.location.pathname.split('/');
-    const dashboard = <Link to='/admin'>Dashboard</Link>;
-    const collections = <Link to={'/admin/collections'}>collections</Link>;
-    const collection = <Link to={'/admin/collections/'+items[3]}>{items[3]}</Link>;
-    const stats = <Link to={'/admin/stats'}>stats</Link>;
+    const dashboard = <Link to='/durian'>Dashboard</Link>;
+    const collections = <Link to={'/durian/collections'}>collections</Link>;
+    const collection = <Link to={'/durian/collections/'+items[3]}>{items[3]}</Link>;
+    const stats = <Link to={'/durian/stats'}>stats</Link>;
 
     if(items.includes('collections') && items.length == 4) return (
       <h3>{dashboard} / {collections} / {collection}</h3>
@@ -56,7 +56,7 @@ export default class TopBar extends React.Component {
           </div>
         </div>
         <hr/>
-        {this.state.goToLogin ? <Redirect to="/admin" /> : null}
+        {this.state.goToLogin ? <Redirect to="/durian" /> : null}
       </div>
     );
   }

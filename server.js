@@ -17,25 +17,13 @@ Meteor.methods({
   },
 
   'totalAmountDocs': function(collectionName) {
-    console.log(Mongo.Collection.get(collectionName).find().count())
     return Mongo.Collection.get(collectionName).find().count()
   }
 });
 
 
 Meteor.startup(() => {
-
-// // publications
-//   const collections = Mongo.Collection.getAll();
-//   collections.forEach(collection => {
-//     Meteor.publish('admin_'+collection.name, function() {
-//       const user = Meteor.users.findOne(this.userId);
-//       if(user && user.profile && user.profile.isAdmin){
-//         return collection.instance.find({}, {limit: 1000});
-//       }
-//     })
-//   });
-
+  
   // publications
   const collections = Mongo.Collection.getAll();
   collections.forEach(collection => {
